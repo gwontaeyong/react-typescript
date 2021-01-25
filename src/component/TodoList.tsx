@@ -13,9 +13,8 @@ interface TodoListProps{
 const TodoList:React.FC<TodoListProps> = ({todos
   , onToggle, onRemove
 }) => {    
-
   const todoList = todos.map(
-    (todo) => (<TodoItem {...todo} onToggle={onToggle} onRemove={onRemove}/>)
+    (todo) => (<TodoItem {...todo} onToggle={onToggle} onRemove={onRemove} key={todo.id}/>)
   )
   return (
     <div>

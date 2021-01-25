@@ -20,7 +20,7 @@ class TodoApp extends React.Component {
 
   /**
    * 
-   * @param e 이거에 대한 타입이 멍렇냐..;;;
+   * @param e 이거에 대한 타입공부가 필요함
    */
   handleChange = (e: {target:HTMLInputElement}) => {
     this.setState({
@@ -55,6 +55,7 @@ class TodoApp extends React.Component {
     const index = todos.findIndex(todo => todo.id === id)
     const selected = todos[index]
 
+    //todo에 push 할 경우 변경이 이루어지지 않음
     const newTodos = [...todos]
     newTodos[index] = {
       ...selected,

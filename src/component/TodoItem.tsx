@@ -16,6 +16,7 @@ interface TodoItemEvent {
   onRemove: any
 }
 
+// 타입에대한 조합 | 도 가능함
 type Props = TodoItemProps & TodoItemEvent;
 
 const TodoItem: React.FC<Props> = ({ id, text, checked, onToggle, onRemove
